@@ -30,6 +30,6 @@ jobs:
         context: ./
         file: ./project/techtrends/Dockerfile
         push: true
-        tags: techtrends:latest
+        tags: mfaisal/techtrends:latest
       
       
