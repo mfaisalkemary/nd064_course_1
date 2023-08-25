@@ -1,11 +1,28 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends:1.0.0.0 .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -it -d --name techtrends-app -p 7111:3111 techtrends:1.0.0 
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+ docker run -it --name techtrends-app -p 7111:3111 techtrends:1.0.0
+ docker logs techtrends-app 
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+172.17.0.1 - - [25/Aug/2023 06:39:27] "GET /about HTTP/1.1" 200 -
+172.17.0.1 - - [25/Aug/2023 06:39:28] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [25/Aug/2023 06:39:29] "GET /create HTTP/1.1" 200 -
+172.17.0.1 - - [25/Aug/2023 06:39:30] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [25/Aug/2023 06:39:41] "POST /create HTTP/1.1" 302 -
+172.17.0.1 - - [25/Aug/2023 06:39:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [25/Aug/2023 06:39:41] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [25/Aug/2023 06:39:56] "GET /healthz HTTP/1.1" 200 -
+172.17.0.1 - - [25/Aug/2023 06:40:03] "GET /metrics HTTP/1.1" 200 -
